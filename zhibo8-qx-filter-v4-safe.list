@@ -1,0 +1,113 @@
+# 直播吧 App 去广告 - Quantumult X 分流/过滤规则
+# 类型：Filter / Rule。更新：2026-04-25
+# 若误伤页面，先临时关闭 HOST-KEYWORD,gdt / pangle / tanx 三条。
+
+# 直播吧自有广告/导购/广告配置域名
+HOST,a.zhibo8.com,REJECT
+HOST,a.zhibo8.cc,REJECT
+HOST,ad.zhibo8.com,REJECT
+HOST,ad.zhibo8.cc,REJECT
+HOST,ads.zhibo8.com,REJECT
+HOST,ads.zhibo8.cc,REJECT
+HOST,pca.zhibo8.com,REJECT
+HOST,pca.zhibo8.cc,REJECT
+HOST,daogou.zhibo8.com,REJECT
+HOST,daogou.zhibo8.cc,REJECT
+HOST-SUFFIX,adstatic.zhibo8.com,REJECT
+HOST-SUFFIX,adstatic.zhibo8.cc,REJECT
+
+# 统计/画像，通常不影响正文
+HOST-SUFFIX,stat.zhibo8.com,REJECT
+HOST-SUFFIX,stat.zhibo8.cc,REJECT
+HOST-SUFFIX,stats.zhibo8.com,REJECT
+HOST-SUFFIX,stats.zhibo8.cc,REJECT
+HOST-SUFFIX,track.zhibo8.com,REJECT
+HOST-SUFFIX,track.zhibo8.cc,REJECT
+HOST-SUFFIX,log.zhibo8.com,REJECT
+HOST-SUFFIX,log.zhibo8.cc,REJECT
+
+# 穿山甲 / 巨量引擎 / Pangle
+HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+HOST-SUFFIX,pglstatp-toutiao.com,REJECT
+HOST-SUFFIX,pangolin.snssdk.com,REJECT
+HOST-SUFFIX,pangolin16.sgsnssdk.com,REJECT
+HOST-SUFFIX,pglstatp-snssdk.com,REJECT
+HOST-SUFFIX,api-access.pangolin-sdk-toutiao.com,REJECT
+HOST-SUFFIX,ad.oceanengine.com,REJECT
+HOST-SUFFIX,byteadverts.com,REJECT
+HOST-SUFFIX,csjplatform.com,REJECT
+HOST-KEYWORD,pangle,REJECT
+HOST-KEYWORD,pangolin,REJECT
+HOST-KEYWORD,oceanengine,REJECT
+
+# 腾讯广告 / 优量汇 / 广点通
+HOST-SUFFIX,gdt.qq.com,REJECT
+HOST-SUFFIX,e.qq.com,REJECT
+HOST-SUFFIX,sdk.e.qq.com,REJECT
+HOST-SUFFIX,mi.gdt.qq.com,REJECT
+HOST-SUFFIX,v.gdt.qq.com,REJECT
+HOST-SUFFIX,pgdt.gtimg.cn,REJECT
+HOST-SUFFIX,qzs.gdtimg.com,REJECT
+HOST-SUFFIX,adsmind.gdtimg.com,REJECT
+HOST-SUFFIX,ad.qq.com,REJECT
+HOST-SUFFIX,adnet.qq.com,REJECT
+HOST-SUFFIX,ads.wechat.com,REJECT
+HOST-SUFFIX,info.e.qq.com,REJECT
+HOST-SUFFIX,public.gdtimg.com,REJECT
+HOST-SUFFIX,gdtimg.com,REJECT
+HOST-KEYWORD,gdt,REJECT
+
+# 快手广告
+HOST-SUFFIX,open.e.kuaishou.com,REJECT
+HOST-SUFFIX,ad.partner.gifshow.com,REJECT
+HOST-SUFFIX,api.e.kuaishou.com,REJECT
+
+# 百度联盟
+HOST-SUFFIX,duapps.com,REJECT
+HOST-SUFFIX,ubmcmm.baidustatic.com,REJECT
+HOST-SUFFIX,mobads.baidu.com,REJECT
+HOST-SUFFIX,afd.baidu.com,REJECT
+HOST-SUFFIX,hm.baidu.com,REJECT
+HOST-SUFFIX,pos.baidu.com,REJECT
+HOST-SUFFIX,union.baidu.com,REJECT
+
+# 友盟统计
+HOST-SUFFIX,umeng.com,REJECT
+HOST-SUFFIX,umengcloud.com,REJECT
+HOST-SUFFIX,umsns.com,REJECT
+HOST-SUFFIX,ulogs.umeng.com,REJECT
+HOST-SUFFIX,alog.umeng.com,REJECT
+
+# InMobi / Tanx / 阿里妈妈 / 其他广告平台
+HOST-SUFFIX,ads.inmobi.cn,REJECT
+HOST-SUFFIX,go.inmobi.net,REJECT
+HOST-SUFFIX,i.l.inmobicdn.cn,REJECT
+HOST-SUFFIX,inmobi.cn,REJECT
+HOST-SUFFIX,inmobi.com,REJECT
+HOST-KEYWORD,inmobi,REJECT
+HOST-SUFFIX,tanx.com,REJECT
+HOST-SUFFIX,atanx.alicdn.com,REJECT
+HOST-SUFFIX,atanx2.alicdn.com,REJECT
+HOST-SUFFIX,atanx3.alicdn.com,REJECT
+HOST-SUFFIX,afpeng.alimama.com,REJECT
+HOST-SUFFIX,afpmm.alicdn.com,REJECT
+HOST-KEYWORD,tanx,REJECT
+HOST-SUFFIX,jiaads.com,REJECT
+HOST-SUFFIX,voiceads.cn,REJECT
+HOST-SUFFIX,adview.cn,REJECT
+HOST-SUFFIX,adview.com,REJECT
+HOST-SUFFIX,cocounion.com,REJECT
+HOST-SUFFIX,maplehaze.cn,REJECT
+HOST-SUFFIX,jzt.jd.com,REJECT
+HOST-SUFFIX,ssp.xiaomi.com,REJECT
+HOST-SUFFIX,quyuansu.com,REJECT
+HOST-SUFFIX,lenovomm.com,REJECT
+HOST-SUFFIX,billowlink.com,REJECT
+HOST-SUFFIX,adtalos.com,REJECT
+HOST-SUFFIX,findwxapp.com,REJECT
+HOST-SUFFIX,rgyun.com,REJECT
+
+# 直播吧实际广告接口：qiumibao 只用 Rewrite 精准拦截，不做整域名拦截，避免误伤正文数据
+
+# 直播吧实际广告接口 / 固定 IP 广告链路（BOSS 抓包补充 2026-04-25 11:55）
+IP-CIDR,203.119.206.9/32,REJECT,no-resolve
