@@ -106,3 +106,8 @@ HOST-SUFFIX,billowlink.com,REJECT
 HOST-SUFFIX,adtalos.com,REJECT
 HOST-SUFFIX,findwxapp.com,REJECT
 HOST-SUFFIX,rgyun.com,REJECT
+
+# 直播吧实际广告接口 / 球迷宝域名（BOSS 抓包补充 2026-04-25）
+HOST,a.qiumibao.com,REJECT
+HOST-SUFFIX,qiumibao.com,REJECT
+IP-CIDR,47.111.8.123/32,REJECT,no-resolve
