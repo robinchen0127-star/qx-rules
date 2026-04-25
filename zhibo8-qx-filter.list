@@ -111,3 +111,9 @@ HOST-SUFFIX,rgyun.com,REJECT
 HOST,a.qiumibao.com,REJECT
 HOST-SUFFIX,qiumibao.com,REJECT
 IP-CIDR,47.111.8.123/32,REJECT,no-resolve
+
+# 直播吧实际广告接口 / 固定 IP 广告链路（BOSS 抓包补充 2026-04-25 11:55）
+IP-CIDR,203.119.206.9/32,REJECT,no-resolve
+# 以下两个 IP 出现在广告加载同一秒，先列为可选；如正文/图片异常可注释
+IP-CIDR,121.43.250.249/32,REJECT,no-resolve
+IP-CIDR,116.62.164.202/32,REJECT,no-resolve
