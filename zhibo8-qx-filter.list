@@ -1,8 +1,8 @@
-# 直播吧 App 去广告 - Quantumult X 完整手动合并版
-# 推荐远程订阅分别添加：zhibo8-qx-filter.list 作为 Filter，zhibo8-qx-rewrite.conf 作为 Rewrite。
-# 本文件用于手动复制到本地配置，不建议作为单个远程资源导入。
+# 直播吧 App 去广告 - Quantumult X 分流/过滤规则
+# 类型：Filter / Rule。更新：2026-04-25
+# 若误伤页面，先临时关闭 HOST-KEYWORD,gdt / pangle / tanx 三条。
 
-[filter_local]
+# 直播吧自有广告/导购/广告配置域名
 HOST,a.zhibo8.com,REJECT
 HOST,a.zhibo8.cc,REJECT
 HOST,ad.zhibo8.com,REJECT
@@ -15,6 +15,8 @@ HOST,daogou.zhibo8.com,REJECT
 HOST,daogou.zhibo8.cc,REJECT
 HOST-SUFFIX,adstatic.zhibo8.com,REJECT
 HOST-SUFFIX,adstatic.zhibo8.cc,REJECT
+
+# 统计/画像，通常不影响正文
 HOST-SUFFIX,stat.zhibo8.com,REJECT
 HOST-SUFFIX,stat.zhibo8.cc,REJECT
 HOST-SUFFIX,stats.zhibo8.com,REJECT
@@ -23,6 +25,8 @@ HOST-SUFFIX,track.zhibo8.com,REJECT
 HOST-SUFFIX,track.zhibo8.cc,REJECT
 HOST-SUFFIX,log.zhibo8.com,REJECT
 HOST-SUFFIX,log.zhibo8.cc,REJECT
+
+# 穿山甲 / 巨量引擎 / Pangle
 HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
 HOST-SUFFIX,pglstatp-toutiao.com,REJECT
 HOST-SUFFIX,pangolin.snssdk.com,REJECT
@@ -35,6 +39,8 @@ HOST-SUFFIX,csjplatform.com,REJECT
 HOST-KEYWORD,pangle,REJECT
 HOST-KEYWORD,pangolin,REJECT
 HOST-KEYWORD,oceanengine,REJECT
+
+# 腾讯广告 / 优量汇 / 广点通
 HOST-SUFFIX,gdt.qq.com,REJECT
 HOST-SUFFIX,e.qq.com,REJECT
 HOST-SUFFIX,sdk.e.qq.com,REJECT
@@ -50,9 +56,13 @@ HOST-SUFFIX,info.e.qq.com,REJECT
 HOST-SUFFIX,public.gdtimg.com,REJECT
 HOST-SUFFIX,gdtimg.com,REJECT
 HOST-KEYWORD,gdt,REJECT
+
+# 快手广告
 HOST-SUFFIX,open.e.kuaishou.com,REJECT
 HOST-SUFFIX,ad.partner.gifshow.com,REJECT
 HOST-SUFFIX,api.e.kuaishou.com,REJECT
+
+# 百度联盟
 HOST-SUFFIX,duapps.com,REJECT
 HOST-SUFFIX,ubmcmm.baidustatic.com,REJECT
 HOST-SUFFIX,mobads.baidu.com,REJECT
@@ -60,11 +70,15 @@ HOST-SUFFIX,afd.baidu.com,REJECT
 HOST-SUFFIX,hm.baidu.com,REJECT
 HOST-SUFFIX,pos.baidu.com,REJECT
 HOST-SUFFIX,union.baidu.com,REJECT
+
+# 友盟统计
 HOST-SUFFIX,umeng.com,REJECT
 HOST-SUFFIX,umengcloud.com,REJECT
 HOST-SUFFIX,umsns.com,REJECT
 HOST-SUFFIX,ulogs.umeng.com,REJECT
 HOST-SUFFIX,alog.umeng.com,REJECT
+
+# InMobi / Tanx / 阿里妈妈 / 其他广告平台
 HOST-SUFFIX,ads.inmobi.cn,REJECT
 HOST-SUFFIX,go.inmobi.net,REJECT
 HOST-SUFFIX,i.l.inmobicdn.cn,REJECT
@@ -92,25 +106,3 @@ HOST-SUFFIX,billowlink.com,REJECT
 HOST-SUFFIX,adtalos.com,REJECT
 HOST-SUFFIX,findwxapp.com,REJECT
 HOST-SUFFIX,rgyun.com,REJECT
-
-[rewrite_local]
-# 直播吧广告配置/开屏/弹窗/信息流
-^https?:\/\/pca\.zhibo8\.(cc|com)\/sdkAdvert\.php.* url reject-dict
-^https?:\/\/[^\/]*zhibo8\.(cc|com|net|cn)\/.*sdkAdvert.* url reject-dict
-^https?:\/\/[^\/]*zhibo8\.(cc|com|net|cn)\/.*(splash|startup|launch|open_screen|openscreen|start_ad|launch_ad|splash_ad|boot_ad|welcome).* url reject-dict
-^https?:\/\/[^\/]*zhibo8\.(cc|com|net|cn)\/.*(popup|pop_up|popwindow|dialog|modal|float|floating|window_ad|alert_ad|interstitial).* url reject-dict
-^https?:\/\/[^\/]*zhibo8\.(cc|com|net|cn)\/.*(banner|advert|advertise|advertisement|ad_list|ads_list|feed_ad|native_ad|list_ad|news_ad|recommend_ad|app_ad|insert_ad).* url reject-dict
-^https?:\/\/[^\/]*zhibo8\.(cc|com|net|cn)\/.*(promotion|promote|activity_popup|activity_ad|event_ad|market|marketing|commercial).* url reject-dict
-^https?:\/\/[^\/]*zhibo8\.(cc|com|net|cn)\/.*(\/gg\/|\/adv\/|\/ad\/|\/ads\/|adver|material|adconfig|ad_config).* url reject-dict
-
-# 广告 SDK 常见请求
-^https?:\/\/.*\.(pangolin-sdk-toutiao|pglstatp-toutiao|pglstatp-snssdk|csjplatform)\.com\/.* url reject-dict
-^https?:\/\/.*\.(gdt|e)\.qq\.com\/.* url reject-dict
-^https?:\/\/.*\.gdtimg\.com\/.* url reject-dict
-^https?:\/\/.*\.(mobads|pos|union)\.baidu\.com\/.* url reject-dict
-
-# 统计上报，减少广告画像
-^https?:\/\/[^\/]*zhibo8\.(cc|com|net|cn)\/.*(track|trace|report|collect|analytics|behavior|event_log|applog).* url reject-200
-
-[mitm]
-hostname = pca.zhibo8.cc, pca.zhibo8.com, *.zhibo8.cc, *.zhibo8.com, *.zhibo8.net, *.zhibo8.cn
