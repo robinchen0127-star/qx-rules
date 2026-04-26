@@ -1,3 +1,12 @@
+# 微信/腾讯基础服务直连前置规则（iOS Quantumult X）
+# 说明：iOS 不使用 WeChat.exe / WeChatApp.exe 进程规则，仅保留域名直连。
+DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+DOMAIN-SUFFIX,wechat.com,DIRECT
+DOMAIN-SUFFIX,qq.com,DIRECT
+DOMAIN-SUFFIX,qpic.cn,DIRECT
+DOMAIN-SUFFIX,gtimg.com,DIRECT
+DOMAIN-SUFFIX,myqcloud.com,DIRECT
+
 # X / Twitter 去广告 - Quantumult X Filter（安全回滚版）
 # 更新时间：2026-04-26
 # 说明：为排查“帖子无法正常载入”，已临时禁用所有 X 相关拦截规则。
