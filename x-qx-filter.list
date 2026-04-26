@@ -1,13 +1,7 @@
-# X / Twitter 去广告 - Quantumult X Filter
+# X / Twitter 去广告 - Quantumult X Filter（安全回滚版）
 # 更新时间：2026-04-26
-# 用途：拦截 X 广告、分析、追踪相关域名。
-# 导入类型：Filter / 分流规则
+# 说明：为排查“帖子无法正常载入”，已临时禁用所有 X 相关拦截规则。
+# 当前文件不会拦截任何 X 域名。若 X 恢复正常，说明此前 Filter/Rewrite 中至少有一项误伤。
+# 后续需要根据 Quantumult X 网络活动日志逐条补规则，不再盲拦域名。
 
-HOST,ads.x.com,REJECT
-HOST,ads-api.x.com,REJECT
-HOST,ads.twitter.com,REJECT
-HOST,ads-api.twitter.com,REJECT
-HOST-SUFFIX,ads-twitter.com,REJECT
-HOST,analytics.twitter.com,REJECT
-HOST,scribe.twitter.com,REJECT
-HOST,syndication.twitter.com,REJECT
+# 暂无启用规则
