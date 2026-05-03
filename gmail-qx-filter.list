@@ -1,0 +1,30 @@
+# Quantumult X - Gmail 推广/广告辅助拦截 Filter
+# 更新时间：2026-05-04
+# 说明：Gmail App 内“推广/促销”邮件多是服务端分类内容，网络规则只能拦部分广告/跟踪域名，不能彻底删除推广标签页邮件。
+
+# Google 广告/跟踪相关域名
+HOST-SUFFIX,doubleclick.net,REJECT
+HOST-SUFFIX,googleadservices.com,REJECT
+HOST-SUFFIX,googlesyndication.com,REJECT
+HOST-SUFFIX,googletagservices.com,REJECT
+HOST-SUFFIX,googletagmanager.com,REJECT
+HOST-SUFFIX,google-analytics.com,REJECT
+HOST-SUFFIX,adservice.google.com,REJECT
+HOST-SUFFIX,ads.google.com,REJECT
+HOST-SUFFIX,pagead2.googlesyndication.com,REJECT
+HOST-SUFFIX,tpc.googlesyndication.com,REJECT
+HOST-SUFFIX,securepubads.g.doubleclick.net,REJECT
+HOST-SUFFIX,stats.g.doubleclick.net,REJECT
+
+# 邮件营销常见跟踪像素/跳转域名
+HOST-SUFFIX,mailchimp.com,REJECT
+HOST-SUFFIX,list-manage.com,REJECT
+HOST-SUFFIX,sendgrid.net,REJECT
+HOST-SUFFIX,mailgun.org,REJECT
+HOST-SUFFIX,mandrillapp.com,REJECT
+HOST-SUFFIX,constantcontact.com,REJECT
+HOST-SUFFIX,hubspotemail.net,REJECT
+HOST-SUFFIX,hs-analytics.net,REJECT
+HOST-SUFFIX,hs-banner.com,REJECT
+HOST-SUFFIX,klaviyo.com,REJECT
+HOST-SUFFIX,omnisend.com,REJECT
