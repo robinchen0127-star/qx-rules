@@ -1,6 +1,6 @@
-# Quantumult X - App 广告拦截 Filter（豆瓣 / 京东）
+# Quantumult X - App 广告拦截 Filter（豆瓣 / 京东 / 闲鱼）
 # 更新时间：2026-06-02
-# 用途：屏蔽豆瓣、京东等 App 开屏广告、广告 SDK、埋点域名
+# 用途：屏蔽豆瓣、京东、闲鱼等 App 开屏广告、广告 SDK、埋点域名
 
 HOST,ad.doubanio.com,REJECT
 HOST,erebor.douban.com,REJECT
@@ -41,3 +41,21 @@ HOST-SUFFIX,cm.jd.com,REJECT
 HOST-SUFFIX,img-x.jd.com,REJECT
 HOST-KEYWORD,jd-ad,REJECT
 HOST-KEYWORD,jdad,REJECT
+
+# 闲鱼广告 SDK / 监测域名
+# 注意：不拦截 acs.m.taobao.com / h5api.m.taobao.com，它们是核心 API。
+HOST-SUFFIX,adashx.m.taobao.com,REJECT
+HOST-SUFFIX,umdc.m.taobao.com,REJECT
+HOST-SUFFIX,adash.man.aliyuncs.com,REJECT
+HOST-SUFFIX,adash-c.ut.taobao.com,REJECT
+HOST-SUFFIX,adash-emas.cn-hangzhou.aliyuncs.com,REJECT
+HOST-SUFFIX,amdc.m.taobao.com,REJECT
+HOST-SUFFIX,hydra.alibaba.com,REJECT
+HOST-SUFFIX,fourier.taobao.com,REJECT
+HOST-SUFFIX,alimama.com,REJECT
+HOST-SUFFIX,atanx.alicdn.com,REJECT
+HOST-SUFFIX,ifs.tanx.com,REJECT
+HOST-SUFFIX,cdn.tanx.com,REJECT
+HOST-SUFFIX,strip.taobaocdn.com,REJECT
+HOST-KEYWORD,tanx,REJECT
+HOST-KEYWORD,alimama,REJECT
