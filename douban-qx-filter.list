@@ -1,8 +1,10 @@
-# Quantumult X - 豆瓣开屏广告拦截 Filter
+# Quantumult X - 综合开屏广告拦截 Filter
 # 更新时间：2026-06-02
 # 导入类型：Filter / Rule
-# 注意：不域名级拦截 api.douban.com（核心 API）。
+# 说明：所有 App 去广告域名拦截统一汇总在此文件。
+# 注意：不域名级拦截 api.douban.com 等核心 API。
 
+# ===== 豆瓣 =====
 HOST,ad.doubanio.com,REJECT
 HOST,erebor.douban.com,REJECT
 HOST,erebor.doubanio.com,REJECT
@@ -10,7 +12,22 @@ HOST,adservice.douban.com,REJECT
 HOST-SUFFIX,ad.doubanio.com,REJECT
 HOST-KEYWORD,doubanad,REJECT
 
-# 常见移动广告 SDK / 监测域名
+# ===== 东方甄选（字节系 / 穿山甲 Pangle）=====
+HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
+HOST-SUFFIX,pangolin.snssdk.com,REJECT
+HOST-SUFFIX,pglstatp-toutiao.com,REJECT
+HOST-SUFFIX,pangle.io,REJECT
+HOST-SUFFIX,pangle-ad.com,REJECT
+HOST-KEYWORD,pangle,REJECT
+HOST-SUFFIX,ad.toutiao.com,REJECT
+HOST-SUFFIX,dsp-x.jinritemai.com,REJECT
+HOST-SUFFIX,extlog.snssdk.com,REJECT
+HOST-SUFFIX,dm.toutiao.com,REJECT
+HOST-SUFFIX,dig.bdurl.net,REJECT
+HOST-SUFFIX,ads.tiktok.com,REJECT
+
+# ===== 通用移动广告 SDK / 联盟 / 监测 =====
 HOST-SUFFIX,ads.oppomobile.com,REJECT
 HOST-SUFFIX,ads.heytapmobi.com,REJECT
 HOST-SUFFIX,ads.heytapmobile.com,REJECT
