@@ -3,10 +3,6 @@
 # 用途：屏蔽豆瓣 App 开屏广告、广告 SDK、埋点域名
 
 HOST,ad.doubanio.com,REJECT
-HOST,erebor.douban.com,REJECT
-HOST,erebor.doubanio.com,REJECT
-HOST,frodo.douban.com,REJECT
-HOST,adservice.douban.com,REJECT
 HOST-SUFFIX,ad.doubanio.com,REJECT
 HOST-KEYWORD,doubanad,REJECT
 
@@ -34,6 +30,4 @@ HOST,vod-license-m.volccdn.com,REJECT
 
 # 豆瓣冷启动第二批日志补充（2026-06-02）
 # amonsul 为豆瓣监测；h-adashx4bc 为阿里 UT/广告监测上传。
-HOST,amonsul.douban.com,REJECT
 HOST,h-adashx4bc.ut.taobao.com,REJECT
-HOST-SUFFIX,ut.taobao.com,REJECT
