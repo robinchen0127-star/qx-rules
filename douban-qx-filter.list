@@ -31,3 +31,9 @@ HOST-SUFFIX,umsns.com,REJECT
 HOST,apmplus.volces.com,REJECT
 HOST,webcast-open.douyin.com,REJECT
 HOST,vod-license-m.volccdn.com,REJECT
+
+# 豆瓣冷启动第二批日志补充（2026-06-02）
+# amonsul 为豆瓣监测；h-adashx4bc 为阿里 UT/广告监测上传。
+HOST,amonsul.douban.com,REJECT
+HOST,h-adashx4bc.ut.taobao.com,REJECT
+HOST-SUFFIX,ut.taobao.com,REJECT
