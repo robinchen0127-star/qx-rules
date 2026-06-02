@@ -16,9 +16,12 @@ HOST-KEYWORD,doubanad,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
 HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
 HOST-SUFFIX,pangolin.snssdk.com,REJECT
+HOST-SUFFIX,is.snssdk.com,REJECT
+HOST-SUFFIX,sf1-dycdn-tos.pstatp.com,REJECT
 HOST-SUFFIX,pglstatp-toutiao.com,REJECT
 HOST-SUFFIX,pangle.io,REJECT
 HOST-SUFFIX,pangle-ad.com,REJECT
+HOST-SUFFIX,ad.union.com,REJECT
 HOST-KEYWORD,pangle,REJECT
 HOST-SUFFIX,ad.toutiao.com,REJECT
 HOST-SUFFIX,dsp-x.jinritemai.com,REJECT
