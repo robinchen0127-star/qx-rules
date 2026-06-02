@@ -1,7 +1,5 @@
-# Quantumult X - 豆瓣最小安全 Filter
+# Quantumult X - 豆瓣安全 Filter（临时回退）
 # 更新时间：2026-06-02
-# 用途：仅屏蔽明确豆瓣广告域名，避免误伤页面加载
+# 用途：先恢复豆瓣 App 页面可用性；暂不启用任何域名拦截
+# 说明：如果页面恢复，再根据活动日志只补明确广告请求
 
-HOST,ad.doubanio.com,REJECT
-HOST-SUFFIX,ad.doubanio.com,REJECT
-HOST-KEYWORD,doubanad,REJECT
