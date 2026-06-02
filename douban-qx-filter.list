@@ -26,6 +26,7 @@ HOST-SUFFIX,extlog.snssdk.com,REJECT
 HOST-SUFFIX,dm.toutiao.com,REJECT
 HOST-SUFFIX,dig.bdurl.net,REJECT
 HOST-SUFFIX,ads.tiktok.com,REJECT
+HOST-SUFFIX,tingyun.com,REJECT
 
 # ===== 通用移动广告 SDK / 联盟 / 监测 =====
 HOST-SUFFIX,ads.oppomobile.com,REJECT
