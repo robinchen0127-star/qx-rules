@@ -1,0 +1,18 @@
+# Quantumult X - 京东广告 SDK / 监测域名 Filter
+# 更新时间：2026-06-02
+# 导入类型：Filter / Rule
+# 注意：不拦截 api.m.jd.com，它是京东核心 API。
+
+HOST,blackhole.m.jd.com,REJECT
+HOST,xlog.m.jd.com,REJECT
+HOST,janapi.m.jd.com,REJECT
+HOST,uranus.m.jd.com,REJECT
+HOST,bdsp.m.jd.com,REJECT
+HOST,policy.jd.com,REJECT
+HOST-SUFFIX,jads.co,REJECT
+HOST-SUFFIX,jdads.com,REJECT
+HOST-SUFFIX,ads.union.jd.com,REJECT
+HOST-SUFFIX,cm.jd.com,REJECT
+HOST-SUFFIX,img-x.jd.com,REJECT
+HOST-KEYWORD,jd-ad,REJECT
+HOST-KEYWORD,jdad,REJECT

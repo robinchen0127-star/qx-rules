@@ -1,0 +1,27 @@
+# Quantumult X - 豆瓣开屏广告拦截 Filter v3
+# 更新时间：2026-06-02
+# 导入类型：Filter / Rule
+# 注意：不域名级拦截 api.douban.com。
+
+HOST,ad.doubanio.com,REJECT
+HOST,erebor.douban.com,REJECT
+HOST,erebor.doubanio.com,REJECT
+HOST,adservice.douban.com,REJECT
+HOST-SUFFIX,ad.doubanio.com,REJECT
+HOST-KEYWORD,doubanad,REJECT
+
+# 常见移动广告 SDK / 监测域名
+HOST-SUFFIX,ads.oppomobile.com,REJECT
+HOST-SUFFIX,ads.heytapmobi.com,REJECT
+HOST-SUFFIX,ads.heytapmobile.com,REJECT
+HOST-SUFFIX,admobile.top,REJECT
+HOST-SUFFIX,gdt.qq.com,REJECT
+HOST-SUFFIX,e.qq.com,REJECT
+HOST-SUFFIX,mi.gdt.qq.com,REJECT
+HOST-SUFFIX,mobads.baidu.com,REJECT
+HOST-SUFFIX,union.baidu.com,REJECT
+HOST-SUFFIX,admaster.com.cn,REJECT
+HOST-SUFFIX,adsage.com,REJECT
+HOST-SUFFIX,umeng.com,REJECT
+HOST-SUFFIX,umengcloud.com,REJECT
+HOST-SUFFIX,umsns.com,REJECT

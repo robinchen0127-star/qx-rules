@@ -1,0 +1,20 @@
+# Quantumult X - 闲鱼广告 SDK / 监测域名 Filter
+# 更新时间：2026-06-02
+# 导入类型：Filter / Rule
+# 注意：不拦截 acs.m.taobao.com / h5api.m.taobao.com，它们是核心 API。
+
+HOST-SUFFIX,adashx.m.taobao.com,REJECT
+HOST-SUFFIX,umdc.m.taobao.com,REJECT
+HOST-SUFFIX,adash.man.aliyuncs.com,REJECT
+HOST-SUFFIX,adash-c.ut.taobao.com,REJECT
+HOST-SUFFIX,adash-emas.cn-hangzhou.aliyuncs.com,REJECT
+HOST-SUFFIX,amdc.m.taobao.com,REJECT
+HOST-SUFFIX,hydra.alibaba.com,REJECT
+HOST-SUFFIX,fourier.taobao.com,REJECT
+HOST-SUFFIX,alimama.com,REJECT
+HOST-SUFFIX,atanx.alicdn.com,REJECT
+HOST-SUFFIX,ifs.tanx.com,REJECT
+HOST-SUFFIX,cdn.tanx.com,REJECT
+HOST-SUFFIX,strip.taobaocdn.com,REJECT
+HOST-KEYWORD,tanx,REJECT
+HOST-KEYWORD,alimama,REJECT
