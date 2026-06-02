@@ -1,33 +1,7 @@
-# Quantumult X - 豆瓣开屏广告拦截 Filter
+# Quantumult X - 豆瓣最小安全 Filter
 # 更新时间：2026-06-02
-# 用途：屏蔽豆瓣 App 开屏广告、广告 SDK、埋点域名
+# 用途：仅屏蔽明确豆瓣广告域名，避免误伤页面加载
 
 HOST,ad.doubanio.com,REJECT
 HOST-SUFFIX,ad.doubanio.com,REJECT
 HOST-KEYWORD,doubanad,REJECT
-
-# 常见移动广告 SDK / 监测域名
-HOST-SUFFIX,ads.oppomobile.com,REJECT
-HOST-SUFFIX,ads.heytapmobi.com,REJECT
-HOST-SUFFIX,ads.heytapmobile.com,REJECT
-HOST-SUFFIX,admobile.top,REJECT
-HOST-SUFFIX,gdt.qq.com,REJECT
-HOST-SUFFIX,e.qq.com,REJECT
-HOST-SUFFIX,mi.gdt.qq.com,REJECT
-HOST-SUFFIX,mobads.baidu.com,REJECT
-HOST-SUFFIX,union.baidu.com,REJECT
-HOST-SUFFIX,admaster.com.cn,REJECT
-HOST-SUFFIX,adsage.com,REJECT
-HOST-SUFFIX,umeng.com,REJECT
-HOST-SUFFIX,umengcloud.com,REJECT
-HOST-SUFFIX,umsns.com,REJECT
-
-# 豆瓣开屏实际活动日志补充（2026-06-02）
-# 火山 / 穿山甲广告与监测；按日志精确补充，不拦豆瓣核心 API。
-HOST,apmplus.volces.com,REJECT
-HOST,webcast-open.douyin.com,REJECT
-HOST,vod-license-m.volccdn.com,REJECT
-
-# 豆瓣冷启动第二批日志补充（2026-06-02）
-# amonsul 为豆瓣监测；h-adashx4bc 为阿里 UT/广告监测上传。
-HOST,h-adashx4bc.ut.taobao.com,REJECT
