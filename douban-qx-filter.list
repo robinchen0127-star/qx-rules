@@ -25,3 +25,9 @@ HOST-SUFFIX,adsage.com,REJECT
 HOST-SUFFIX,umeng.com,REJECT
 HOST-SUFFIX,umengcloud.com,REJECT
 HOST-SUFFIX,umsns.com,REJECT
+
+# 豆瓣开屏实际活动日志补充（2026-06-02）
+# 火山 / 穿山甲广告与监测；按日志精确补充，不拦豆瓣核心 API。
+HOST,apmplus.volces.com,REJECT
+HOST,webcast-open.douyin.com,REJECT
+HOST,vod-license-m.volccdn.com,REJECT
