@@ -1,0 +1,31 @@
+# Quantumult X - 东方甄选去广告 Filter
+# 更新时间：2026-06-05
+# 导入类型：Filter / Rule
+# 说明：域名级拦截字节系 / 穿山甲 / 监测相关广告域名；不拦 capi.eastbuy.com 核心接口。
+
+# ===== 东方甄选广告 SDK / 监测 =====
+HOST-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+HOST-SUFFIX,pangolin-sdk-toutiao-b.com,REJECT
+HOST-SUFFIX,pangolin.snssdk.com,REJECT
+HOST-SUFFIX,is.snssdk.com,REJECT
+HOST-SUFFIX,pglstatp-toutiao.com,REJECT
+HOST-SUFFIX,pangle.io,REJECT
+HOST-SUFFIX,pangle-ad.com,REJECT
+HOST-KEYWORD,pangle,REJECT
+HOST-SUFFIX,ad.toutiao.com,REJECT
+HOST-SUFFIX,dsp-x.jinritemai.com,REJECT
+HOST-SUFFIX,extlog.snssdk.com,REJECT
+HOST-SUFFIX,dm.toutiao.com,REJECT
+HOST-SUFFIX,dig.bdurl.net,REJECT
+HOST-SUFFIX,ads.tiktok.com,REJECT
+HOST-SUFFIX,tingyun.com,REJECT
+HOST-SUFFIX,tracking.eastbuy.com,REJECT
+
+# ===== 通用广告兜底 =====
+HOST-SUFFIX,ads.oppomobile.com,REJECT
+HOST-SUFFIX,ads.heytapmobi.com,REJECT
+HOST-SUFFIX,ads.heytapmobile.com,REJECT
+HOST-SUFFIX,gdt.qq.com,REJECT
+HOST-SUFFIX,e.qq.com,REJECT
+HOST-SUFFIX,mobads.baidu.com,REJECT
+HOST-SUFFIX,union.baidu.com,REJECT
