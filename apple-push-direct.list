@@ -1,11 +1,25 @@
 # Quantumult X - Apple 推送服务直连修复
 # 更新时间：2026-06-06
 # 用途：修复 APNs 走代理/广告规则后导致 iOS 外网 App 推送收不到。
-# 依据：Apple 推送通知服务需要长期连接 api.push.apple.com / courier.push.apple.com，常用 TCP 5223，失败后回落 443；不要 REJECT/MITM/走不稳定代理。
+# 关键：APNs 不要 REJECT / MITM / PROXY；必须在所有广告、苹果服务、全球加速规则之前命中 DIRECT。
 
-DOMAIN,api.push.apple.com,DIRECT
-DOMAIN,courier.push.apple.com,DIRECT
-DOMAIN-SUFFIX,push.apple.com,DIRECT
-DOMAIN-SUFFIX,push-apple.com.akadns.net,DIRECT
-DOMAIN-SUFFIX,apple-dns.net,DIRECT
+# APNs 域名
+HOST,api.push.apple.com,DIRECT
+HOST,courier.push.apple.com,DIRECT
+HOST,init.push.apple.com,DIRECT
+HOST,gateway.push.apple.com,DIRECT
+HOST-SUFFIX,push.apple.com,DIRECT
+HOST-SUFFIX,push-apple.com.akadns.net,DIRECT
+HOST-SUFFIX,apple-dns.net,DIRECT
+
+# APNs/Apple 推送常用地址段
 IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
+IP-CIDR6,2620:149::/32,DIRECT,no-resolve
+
+# iCloud/Apple 账户与推送注册相关，避免被代理或广告规则影响
+HOST-SUFFIX,icloud.com,DIRECT
+HOST-SUFFIX,icloud-content.com,DIRECT
+HOST-SUFFIX,apple.com,DIRECT
+HOST-SUFFIX,cdn-apple.com,DIRECT
+HOST-SUFFIX,itunes.apple.com,DIRECT
+HOST-SUFFIX,mzstatic.com,DIRECT
