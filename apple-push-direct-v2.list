@@ -8,6 +8,7 @@ HOST,api.push.apple.com,DIRECT
 HOST,courier.push.apple.com,DIRECT
 HOST,init.push.apple.com,DIRECT
 HOST,gateway.push.apple.com,DIRECT
+HOST,sandbox.push.apple.com,DIRECT
 HOST-SUFFIX,push.apple.com,DIRECT
 HOST-SUFFIX,push-apple.com.akadns.net,DIRECT
 HOST-SUFFIX,apple-dns.net,DIRECT
