@@ -1,0 +1,11 @@
+# Quantumult X - Apple 推送服务直连修复
+# 更新时间：2026-06-06
+# 用途：修复 APNs 走代理/广告规则后导致 iOS 外网 App 推送收不到。
+# 依据：Apple 推送通知服务需要长期连接 api.push.apple.com / courier.push.apple.com，常用 TCP 5223，失败后回落 443；不要 REJECT/MITM/走不稳定代理。
+
+DOMAIN,api.push.apple.com,DIRECT
+DOMAIN,courier.push.apple.com,DIRECT
+DOMAIN-SUFFIX,push.apple.com,DIRECT
+DOMAIN-SUFFIX,push-apple.com.akadns.net,DIRECT
+DOMAIN-SUFFIX,apple-dns.net,DIRECT
+IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
