@@ -14,7 +14,6 @@ HOST-SUFFIX,apple-dns.net,DIRECT
 
 # APNs/Apple 推送常用地址段
 IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
-IP-CIDR6,2620:149::/32,DIRECT,no-resolve
 
 # iCloud/Apple 账户与推送注册相关，避免被代理或广告规则影响
 HOST-SUFFIX,icloud.com,DIRECT
@@ -23,3 +22,5 @@ HOST-SUFFIX,apple.com,DIRECT
 HOST-SUFFIX,cdn-apple.com,DIRECT
 HOST-SUFFIX,itunes.apple.com,DIRECT
 HOST-SUFFIX,mzstatic.com,DIRECT
+
+# APNs IPv6 域名优先；部分 Quantumult X 版本不接受 IP-CIDR6 远程分流格式，已移除 2620:149::/32 以避免整份资源加载失败。
