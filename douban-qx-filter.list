@@ -1,7 +1,7 @@
 # Quantumult X - 综合去广告分流 / Filter
-# 更新时间：2026-06-06
+# 更新时间：2026-06-10（移除豆瓣去广告规则）
 # 导入类型：资源 - 分流 / Filter / Rule
-# 覆盖：直播吧、东方甄选、豆瓣
+# 覆盖：直播吧、东方甄选
 # 注意：不要开启“策略偏好”，保持文件内 DIRECT / REJECT 策略。
 
 # ===== 微信/腾讯直连前置 =====
@@ -120,16 +120,3 @@ HOST-SUFFIX,tracking.eastbuy.com,REJECT
 HOST-SUFFIX,ads.oppomobile.com,REJECT
 HOST-SUFFIX,ads.heytapmobi.com,REJECT
 HOST-SUFFIX,ads.heytapmobile.com,REJECT
-
-# ===== 豆瓣 =====
-HOST,ad.doubanio.com,REJECT
-HOST,erebor.douban.com,REJECT
-HOST,erebor.doubanio.com,REJECT
-HOST,adservice.douban.com,REJECT
-HOST-SUFFIX,ad.doubanio.com,REJECT
-HOST-KEYWORD,doubanad,REJECT
-HOST-SUFFIX,sf1-dycdn-tos.pstatp.com,REJECT
-HOST-SUFFIX,ad.union.com,REJECT
-HOST-SUFFIX,admobile.top,REJECT
-HOST-SUFFIX,admaster.com.cn,REJECT
-HOST-SUFFIX,adsage.com,REJECT
