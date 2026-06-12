@@ -1,16 +1,8 @@
 # Quantumult X - 综合去广告分流 / Filter
-# 更新时间：2026-06-10（移除豆瓣去广告规则）
+# 更新时间：2026-06-12（移除网络直连规则）
 # 导入类型：资源 - 分流 / Filter / Rule
 # 覆盖：直播吧、东方甄选
-# 注意：不要开启“策略偏好”，保持文件内 DIRECT / REJECT 策略。
-
-# ===== 微信/腾讯直连前置 =====
-DOMAIN-SUFFIX,weixin.qq.com,DIRECT
-DOMAIN-SUFFIX,wechat.com,DIRECT
-DOMAIN-SUFFIX,qq.com,DIRECT
-DOMAIN-SUFFIX,qpic.cn,DIRECT
-DOMAIN-SUFFIX,gtimg.com,DIRECT
-DOMAIN-SUFFIX,myqcloud.com,DIRECT
+# 注意：不要开启“策略偏好”，保持文件内 REJECT 策略。
 
 # ===== 直播吧 =====
 HOST,a.zhibo8.com,REJECT
