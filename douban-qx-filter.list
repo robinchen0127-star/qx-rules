@@ -1,7 +1,7 @@
 # Quantumult X - 综合去广告分流 / Filter
 # 更新时间：2026-07-08
 # 导入类型：资源 - 分流 / Filter / Rule
-# 覆盖：直播吧、东方甄选、豆瓣
+# 覆盖：直播吧、京东、东方甄选、豆瓣
 # 注意：不要开启“策略偏好”，保持文件内 DIRECT / REJECT 策略。
 
 # ===== 微信/腾讯直连前置 =====
@@ -109,6 +109,24 @@ IP-CIDR,47.111.8.123/32,REJECT,no-resolve
 IP-CIDR,203.119.206.9/32,REJECT,no-resolve
 IP-CIDR,121.43.250.249/32,REJECT,no-resolve
 IP-CIDR,116.62.164.202/32,REJECT,no-resolve
+
+# ===== 京东 =====
+HOST-SUFFIX,jzt.jd.com,REJECT
+HOST-SUFFIX,jzt.jd.cn,REJECT
+HOST-SUFFIX,ad.jd.com,REJECT
+HOST-SUFFIX,ads.jd.com,REJECT
+HOST-SUFFIX,cm.jd.com,REJECT
+HOST-SUFFIX,du.jd.com,REJECT
+HOST-SUFFIX,xlog.m.jd.com,REJECT
+HOST-SUFFIX,blackhole.m.jd.com,REJECT
+HOST-SUFFIX,janapi.m.jd.com,REJECT
+HOST-SUFFIX,uranus.m.jd.com,REJECT
+HOST-SUFFIX,mercury.m.jd.com,REJECT
+HOST-SUFFIX,orbit.m.jd.com,REJECT
+HOST-SUFFIX,gia.m.jd.com,REJECT
+HOST-SUFFIX,bdsp.m.jd.com,REJECT
+HOST-KEYWORD,jdads,REJECT
+HOST-KEYWORD,jdad,REJECT
 
 # ===== 东方甄选 =====
 HOST-SUFFIX,is.snssdk.com,REJECT
